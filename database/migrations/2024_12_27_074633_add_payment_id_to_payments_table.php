@@ -14,7 +14,7 @@ class AddPaymentIdToPaymentsTable extends Migration
     public function up()
     {
         Schema::table('payments', function (Blueprint $table) {
-            $table->string('payment_id')->nullable();
+            $table->string('payment_id')->unique()->after('status');
         });
     }
 
@@ -26,7 +26,7 @@ class AddPaymentIdToPaymentsTable extends Migration
     public function down()
     {
         Schema::table('payments', function (Blueprint $table) {
-            //
+            $table->dropColumn('payment_id');
         });
     }
 }

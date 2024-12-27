@@ -24,6 +24,10 @@ class ChapaController extends Controller
             return redirect()->route('students.create')->with('error', 'Please complete the registration process first.');
         }
 
+        $request->validate([
+            'payment_id' => 'required|unique:payments,payment_id',
+        ]);
+
         $student = Student::firstOrCreate(['email' => $studentData['email']], $studentData);
         $student->update($studentData);
 

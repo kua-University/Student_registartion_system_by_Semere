@@ -14,5 +14,6 @@ class Payment extends Model
         'course_id',
         'amount',
         'status',
+        'payment_id',
     ];
 }
