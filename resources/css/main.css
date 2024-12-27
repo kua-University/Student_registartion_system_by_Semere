@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#home {
+    background-image: url('../css/main.css');
+    background-size: cover;
+    background-position: center;
+    min-height: calc(100vh - 60px);
+}
+ section > h1 {
+    color: white;
+    margin-top: 16%;
+    font-size: 50px;
+ }
+
+ section > p {
+    color: white;
+    font-size: 30px;
+ }
+
+ footer {
+    position: relative;
+    bottom: 0;
+    width: 100%
+ }
